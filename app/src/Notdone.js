@@ -11,6 +11,7 @@ export default function Filt(props) {
         data.stat === 'notdone'
         
         );
+        console.log('afterfilt', notdone)
         
     return (
 
