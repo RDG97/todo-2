@@ -4,10 +4,17 @@ import { useState, useEffect } from "react"
 import Filt from "./Notdone"
 export default function App() {
     const [data, setData] = useState([]);
-    const [state, setState] = useState('');
+    const [page, setPage] = useState('todo');
+    
+    
+    
+    
+    
+    
     return(
         <>
+        
     <Enter data={data} setData={setData}/>
-    <Filt data={data} setData={setData} state={state} setState={setState}/>
+    {page == 'todo' && <Filt data={data} setData={setData} page={page} setPage={setPage}/>}
     </>
 )}

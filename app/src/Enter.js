@@ -15,7 +15,7 @@ export default function Enter(props) {
     function setit() {
         //console.log('help')
         let x = props.data.length + 1
-        let test = props.data
+        let test = [...props.data]
         let arr = {help:`${Todo}`,id:`${x}`,stat:'notdone'}
         test.push(arr)
         props.setData(test)
@@ -27,6 +27,13 @@ export default function Enter(props) {
         return list
     }
     
+    function changeState(props) {
+        let test2 = [...props.page]
+        test2 = 'complete'
+        props.setPage(test2)
+        console.log('changed state to', props.page)
+    }
+    
     return (
         <>
             <center>
@@ -35,7 +42,7 @@ export default function Enter(props) {
             <input type="submit" id="clear" value="clear local" onClick={emp}></input>
             <br></br>
             <p>you will add <b>{Todo}</b></p>
-            
+            <input type="submit" id="changestate" value="show completed board" onClick={changeState}></input>
             </center>
         </>
     )
