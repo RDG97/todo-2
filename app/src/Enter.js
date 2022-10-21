@@ -23,7 +23,7 @@ export default function Enter(props) {
         console.log('data arr', props)
         let Todof = document.getElementById('Todof')
         Todof.value = ''
-        Filt(props)
+        ///Filt(props)
         return list
     }
     
@@ -37,12 +37,12 @@ export default function Enter(props) {
     return (
         <>
             <center>
-            <input  type="text" id="Todof"  onChange={addTodo}/>
-            <input type="submit" id="TodoSub" value="add to do" onClick={setit}></input>
-            <input type="submit" id="clear" value="clear local" onClick={emp}></input>
-            <br></br>
-            <p>you will add <b>{Todo}</b></p>
-            <input type="submit" id="changestate" value="show completed tasks" onClick={changeState}></input>
+                <input  type="text" id="Todof"  onChange={addTodo}/>
+                <input type="submit" id="TodoSub" value="add to do" onClick={setit}></input>
+                <input type="submit" id="clear" value="clear local" onClick={emp}></input>
+                <br></br>
+                <p>you will add <b>{Todo}</b></p>
+                <input type="submit" id="changestate" value="show completed tasks" onClick={changeState}></input>
             </center>
         </>
     )

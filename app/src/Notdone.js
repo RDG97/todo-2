@@ -10,7 +10,6 @@ export default function Filt(props) {
         );
         console.log('afterfilt', notdone)
 
-
         function test(index) {
             console.log('testtt', props.data[index].stat)
             let test = [...props.data]
@@ -26,18 +25,17 @@ export default function Filt(props) {
         <div className="container bg-primary" id="listBody">
                 <div className="row" id="listBody">
                     <div className="col bg-danger border border-2 border-dark">To do
-                    <div className="row bg-warning border border-2 border-dark">
-                    {notdone.map((props, index) => (
-                    <div key={props.help}>
+                        <div className="row bg-warning border border-2 border-dark">
+                        {notdone.map((props, index) => (
+                            <div key={props.id}>
                         
-                    <h1 >{props.help}</h1>
-                    {console.log('Notdone mapped index', index)}
-                    <input type='submit' value="check off"onClick={ ()=> test(index, props)} ></input>
-    
+                            <h1 >{props.help}</h1>
+                            {console.log('Notdone mapped index', index)}
+                            <input type='submit' value="check off"onClick={ ()=> test(index, props)} ></input>
+                            </div>
+                            ))} 
+                        </div>
                     </div>
-                    ))} 
-                    </div>
-                    </div>
-                    </div>
-                    </div>
+                </div>
+            </div>
         )}

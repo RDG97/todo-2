@@ -12,9 +12,8 @@ export default function App() {
     
     
     return(
-        <>
-        
-    <Enter data={data} setData={setData}/>
-    {page == 'todo' && <Filt data={data} setData={setData} page={page} setPage={setPage}/>}
+    <>
+        <Enter data={data} setData={setData}/>
+        {page == 'todo' && <Filt data={data} setData={setData} page={page} setPage={setPage}/>}
     </>
 )}
