@@ -1,11 +1,21 @@
-import { useState } from "react"
-export default function Notdone(props) {
+import { useState, useEffect } from "react"
+
+export default function Filt(props) {
 
 
-let notdone = props.data.filter(lis =>
-    lis[2] === 'notdone'
-    );
-    console.log('notdone', notdone)
+
+    
+    console.log('before filt', props.data)
+     let notdone = props.data.filter(data =>
+        data[2] === 'notdone'
+        
+        );
+        
+        console.log('notdone', notdone)
+
+
+
+
 
     return (
 

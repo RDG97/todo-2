@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Filt from "./Notdone";
 export default function Enter(props) {
     const [Todo, setTodo] = useState([]);
     
@@ -15,13 +16,14 @@ export default function Enter(props) {
         //console.log('help')
         let x = props.data.length + 1
         let test = props.data
-        let arr = {help: `${Todo}`,id: `${x}`,stat: 'notdone'}
+        let arr = {help:`${Todo}`,id:`${x}`,stat:'notdone'}
         test.push(arr)
         props.setData(test)
         console.log('test arr', test)
         console.log('data arr', props)
         let Todof = document.getElementById('Todof')
         Todof.value = ''
+        Filt(props)
         return list
     }
     
