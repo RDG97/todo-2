@@ -25,7 +25,7 @@ export default function Filt(props) {
 
         <div className="container bg-primary" id="listBody">
                 <div className="row" id="listBody">
-                    <div className="col bg-danger border border-2 border-dark">Coming Up
+                    <div className="col bg-danger border border-2 border-dark">To do
                     <div className="row bg-warning border border-2 border-dark">
                     {notdone.map((props, index) => (
                     <div key={props.help}>

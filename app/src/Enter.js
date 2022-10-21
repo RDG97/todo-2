@@ -42,7 +42,7 @@ export default function Enter(props) {
             <input type="submit" id="clear" value="clear local" onClick={emp}></input>
             <br></br>
             <p>you will add <b>{Todo}</b></p>
-            <input type="submit" id="changestate" value="show completed board" onClick={changeState}></input>
+            <input type="submit" id="changestate" value="show completed tasks" onClick={changeState}></input>
             </center>
         </>
     )
