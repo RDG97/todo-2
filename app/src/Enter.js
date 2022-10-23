@@ -8,7 +8,7 @@ export default function Enter(props) {
         setTodo(e.target.value);
         console.log(Todo)
     }
-        function emp() {}
+        function emp() {localStorage.clear();}
 
     let list = []
     
@@ -27,6 +27,9 @@ export default function Enter(props) {
         return list
     }
     
+
+
+  
     
     
     return (

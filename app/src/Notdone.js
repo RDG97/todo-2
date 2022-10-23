@@ -18,13 +18,18 @@ export default function Filt(props) {
             console.log('props after switch to done', props)
             return props
         }
+
+
         
         
+
+
+
     return (
 
         <div className="container bg-primary" id="listBody">
                 <div className="row" id="listBody">
-                    <div className="col bg-danger border border-2 border-dark">To do
+                    <div className="col bg-danger border border-2 border-dark">TO DO. You have {notdone.length} task(s) left 
                         <div className="row bg-warning border border-2 border-dark">
                         {notdone.map((props, index) => (
                             <div key={props.id}>
