@@ -42,9 +42,6 @@ export default function App() {
         console.log('changed state to', page)
     }
     
-    
-
-    
     function allDone() {
         let arr = data
             const newArr = arr.map(obj => {
@@ -56,33 +53,33 @@ export default function App() {
             });
             console.log('alldone', newArr)
             setData(newArr)
-            }
+    }
 
-            function deleteComplete() {
-                let arr = data
-                    const newArr = arr.map(obj => {
-                        if (obj.stat === 'done') {
-                        return {...obj, stat: 'deleted'};
-                        }
-                        
-                        return obj;
-                    });
-                    console.log('alldone', newArr)
-                    setData(newArr)
-                    }
-                    function reactivate() {
-                        let arr = data
-                            const newArr = arr.map(obj => {
-                                if (obj.stat === 'done') {
-                                return {...obj, stat: 'notdone'};
-                                }
-                                
-                                return obj;
-                            });
-                            console.log('alldone', newArr)
-                            setData(newArr)
-                            }
-            
+    function deleteComplete() {
+        let arr = data
+            const newArr = arr.map(obj => {
+                if (obj.stat === 'done') {
+                return {...obj, stat: 'deleted'};
+                }
+                
+                return obj;
+            });
+            console.log('alldone', newArr)
+            setData(newArr)
+    }
+    function reactivate() {
+        let arr = data
+            const newArr = arr.map(obj => {
+                if (obj.stat === 'done') {
+                return {...obj, stat: 'notdone'};
+                }
+                
+                return obj;
+            });
+            console.log('alldone', newArr)
+            setData(newArr)
+    }
+
     
     
     
