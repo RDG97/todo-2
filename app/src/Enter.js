@@ -27,12 +27,7 @@ export default function Enter(props) {
         return list
     }
     
-    function changeState(props) {
-        let test2 = [...props.page]
-        test2 = 'complete'
-        props.setPage(test2)
-        console.log('changed state to', props.page)
-    }
+    
     
     return (
         <>
@@ -42,7 +37,7 @@ export default function Enter(props) {
                 <input type="submit" id="clear" value="clear local" onClick={emp}></input>
                 <br></br>
                 <p>you will add <b>{Todo}</b></p>
-                <input type="submit" id="changestate" value="show completed tasks" onClick={changeState}></input>
+                
             </center>
         </>
     )

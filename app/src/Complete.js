@@ -1,21 +1,21 @@
 import { useState, useEffect } from "react"
 
-export default function Filt(props) {
+export default function Complete(props) {
 
     console.log('before filt', props.data)
 
-     let notdone = props.data.filter(data =>
-        data.stat === 'notdone'
+     let done = props.data.filter(data =>
+        data.stat === 'done'
         
         );
-        console.log('afterfilt', notdone)
+        console.log('afterfilt', done)
 
-        function test(index) {
+        function filtdone(index) {
             console.log('testtt', props.data[index].stat)
             let test = [...props.data]
-            test[index].stat = 'done'
+            test[index].stat = 'deleted'
             props.setData(test)
-            console.log('props after switch to done', props)
+            console.log('props after switch to deleted', props)
             return props
         }
         
@@ -24,16 +24,17 @@ export default function Filt(props) {
 
         <div className="container bg-primary" id="listBody">
                 <div className="row" id="listBody">
-                    <div className="col bg-danger border border-2 border-dark">To do
+                    <div className="col bg-danger border border-2 border-dark">Complete
                         <div className="row bg-warning border border-2 border-dark">
-                        {notdone.map((props, index) => (
+                        {done.map((props, index) => (
                             <div key={props.id}>
                         
                             <h1 >{props.help}</h1>
                             <p>{props.stat}</p>
-                            {console.log('Notdone mapped index', index)}
-                            <input type='submit' value="check off"onClick={ ()=> test(index, props)} ></input>
+                            {console.log('done mapped index', index)}
+                            <input type='submit' value="delete"onClick={ ()=> filtdone(index, props)} ></input>
                             </div>
+                            
                             ))} 
                         </div>
                     </div>
